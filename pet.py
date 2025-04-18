@@ -33,10 +33,13 @@ class Pet:
             print(f"❌ {trick} is not a valid trick for a dog!")
             print(f"Try one of these: {', '.join(Pet.valid_tricks)}")
             return
-
+        if self.energy < 3:
+            print(f"{self.name} is too tired to learn new tricks right now.")
+            return
         if trick not in self.tricks:
             self.tricks.append(trick)
             self.happiness = min(10, self.happiness + 1)
+            self.energy -= 3
             print(f"{self.name} learned a new trick: {trick}! 🐕‍🦺")
         else:
             print(f"{self.name} already knows how to {trick}!")

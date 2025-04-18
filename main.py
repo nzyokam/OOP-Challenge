@@ -12,3 +12,5 @@ my_pet.train("roll over")
 my_pet.train("play dead")
 my_pet.show_tricks()
 my_pet.get_status()
+
+
